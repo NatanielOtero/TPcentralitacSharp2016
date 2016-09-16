@@ -12,7 +12,7 @@ namespace CentralitaHerencia
 
         public Provincial(Franja miFranja, Llamada unaLlamada): this(unaLlamada.NroOrigen, unaLlamada.Duracion, unaLlamada.NroDestino, miFranja)            
         {
-            this._franjaHoraria = miFranja;
+            
 
         }
 
@@ -58,10 +58,10 @@ namespace CentralitaHerencia
 
         public void Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
-            base.mostrar();
-            sb.AppendLine("Franja Horaria" + this._franjaHoraria);
-            sb.AppendLine("Costo" + this.CostoLlamada);
+            StringBuilder sb = new StringBuilder();            
+            base.mostrar();            
+            sb.AppendLine("Franja Horaria: " + this._franjaHoraria);
+            sb.AppendLine("Costo: " + this.CostoLlamada);
             Console.Write(sb);
         }
     }

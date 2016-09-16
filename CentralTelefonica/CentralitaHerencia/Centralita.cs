@@ -14,19 +14,19 @@ namespace CentralitaHerencia
         
         public Centralita()
         {
-            throw new System.NotImplementedException();
+            this._listaDeLLamadas = new List<Llamada>(); 
         }
 
-        public Centralita(string nombreEmpresa)
+        public Centralita(string nombreEmpresa):this()
         {
-            throw new System.NotImplementedException();
+            this._razonSocial = nombreEmpresa;
         }
 
         public float GananciaPorLocal
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.CalcularGanancia(TipoLlamada.Local);
             }
             
         }
@@ -35,7 +35,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.CalcularGanancia(TipoLlamada.Provincial);
             }
 
         }
@@ -44,7 +44,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.CalcularGanancia(TipoLlamada.Todas);
             }
             
         }
@@ -53,24 +53,109 @@ namespace CentralitaHerencia
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this._listaDeLLamadas;
             }
             
         }
 
-        private float CalcularGanancia()
+        private float CalcularGanancia(TipoLlamada tipo)
         {
-            throw new System.NotImplementedException();
+
+            float retorno = 0;
+            float retorno2 = 0;
+
+            switch (tipo)
+            {
+                case TipoLlamada.Local:
+
+                    Local local;
+
+                    foreach (var item in _listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Local))
+                        {
+                            local = (Local)item;
+                            retorno = retorno + local.CostoLlamada;
+                        }
+                    }
+
+                    break;
+
+                case TipoLlamada.Provincial:
+
+                    Provincial provincial;
+
+                    foreach (var item in _listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Provincial))
+                        {
+                            provincial = (Provincial)item;
+                            retorno = retorno + provincial.CostoLlamada;
+                        }
+                    }
+
+                    break;
+
+                case TipoLlamada.Todas:
+
+                    Local local1;
+                    Provincial provincial1;
+
+                    foreach (var item in _listaDeLLamadas)
+                    {
+                        if (item.GetType() == typeof(Local))
+                        {
+                            local1 = (Local)item;
+                            retorno = retorno + local1.CostoLlamada;
+                        }
+                        if (item.GetType() == typeof(Provincial))
+                        {
+                            provincial1 = (Provincial)item;
+                            retorno2 = retorno2 + provincial1.CostoLlamada;
+                        }
+                    }
+
+
+                    return retorno + retorno2;
+
+
+
+            }
+
+            return retorno;
+
         }
 
         public void Mostrar()
         {
-            throw new System.NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Empresa: " + this._razonSocial);
+            sb.AppendLine("Ganancia Total: " + this.GananciaTotal);
+            sb.AppendLine("Ganancia Local: " + this.GananciaPorLocal);
+            sb.AppendLine("Ganancia Provincial: " + this.GananciaPorProvincial);
+
+            foreach (var item in _listaDeLLamadas)
+            {
+                Provincial provincial;
+                Local local;
+
+                if (item.GetType() == typeof(Local))
+                {
+                    local = (Local)item;
+                    local.Mostrar();
+                }
+                if (item.GetType() == typeof(Provincial))
+                {
+                    provincial = (Provincial)item;
+                    provincial.Mostrar();
+
+                }
+            }
         }
 
         public void OrdenarLlamadas()
         {
-            throw new System.NotImplementedException();
+            this._listaDeLLamadas.Sort(Llamada.OrdenarPorDuracion);
         }
     }
 }

@@ -11,9 +11,9 @@ namespace CentralitaHerencia
         protected float _costo;
 
         public Local(Llamada unaLlamada, float costo): this(unaLlamada.NroOrigen, unaLlamada.Duracion, unaLlamada.NroDestino, costo)
-            
+          
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public Local(string origen, float duracion, string destino, float costo):base(origen,destino,duracion)
@@ -38,10 +38,9 @@ namespace CentralitaHerencia
         public void Mostrar()
         {
             StringBuilder sb;
-            sb = new StringBuilder();
-            base.mostrar();
-            sb.AppendLine("Llamada Local");
-            sb.AppendLine("Costo" + this.CostoLlamada);
+            sb = new StringBuilder();            
+            base.mostrar();            
+            sb.AppendLine("Costo : " + this.CostoLlamada);
             Console.Write(sb);
             
             
