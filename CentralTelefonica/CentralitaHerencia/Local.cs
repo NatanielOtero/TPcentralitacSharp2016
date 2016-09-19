@@ -38,8 +38,11 @@ namespace CentralitaHerencia
         public void Mostrar()
         {
             StringBuilder sb;
-            sb = new StringBuilder();            
-            base.mostrar();            
+            sb = new StringBuilder();
+            StringBuilder tipollamada = new StringBuilder();
+            tipollamada.AppendLine("Llamada Local");
+            Console.Write(tipollamada);
+            base.mostrar();                  
             sb.AppendLine("Costo : " + this.CostoLlamada);
             Console.Write(sb);
             

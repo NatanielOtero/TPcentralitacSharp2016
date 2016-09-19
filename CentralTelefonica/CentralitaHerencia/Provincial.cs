@@ -58,7 +58,10 @@ namespace CentralitaHerencia
 
         public void Mostrar()
         {
-            StringBuilder sb = new StringBuilder();            
+            StringBuilder sb = new StringBuilder();
+            StringBuilder tipollamada = new StringBuilder();
+            tipollamada.AppendLine("Llamada Provincial");
+            Console.Write(tipollamada);
             base.mostrar();            
             sb.AppendLine("Franja Horaria: " + this._franjaHoraria);
             sb.AppendLine("Costo: " + this.CostoLlamada);
