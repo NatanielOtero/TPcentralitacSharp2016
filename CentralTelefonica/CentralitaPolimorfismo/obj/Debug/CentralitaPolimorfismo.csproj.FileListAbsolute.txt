@@ -1,0 +1,6 @@
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.exe.config
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.exe
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\bin\Debug\CentralitaPolimorfismo.pdb
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.exe
+C:\Users\Usuario\Desktop\Tp-CENTRALITA\TPcentralitacSharp2016\CentralTelefonica\CentralitaPolimorfismo\obj\Debug\CentralitaPolimorfismo.pdb
